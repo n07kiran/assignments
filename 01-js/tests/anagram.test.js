@@ -34,4 +34,9 @@ describe('isAnagram', () => {
 		expect(isAnagram('hello', 'hello!')).toBe(false);
 		expect(isAnagram('openai!', 'open')).toBe(false);
 	});
+
+	test('returns true for anagrams with different number of whitespaces', () => {
+		expect(isAnagram('helloworld', 'hello world')).toBe(true);
+		expect(isAnagram('open ai', 'op en ai')).toBe(true);
+	});
 });
